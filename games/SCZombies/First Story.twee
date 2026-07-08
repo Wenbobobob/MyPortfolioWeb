@@ -1,0 +1,799 @@
+:: StoryTitle
+First Story
+
+
+:: StoryData
+{
+  "ifid": "DBE4B4E8-F9E1-47E3-A9E2-A2372181FD4B",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "Start",
+  "zoom": 1
+}
+
+
+:: "I do have some food, but you need to do something for me first!" {"position":"1250,550","size":"100,100"}
+<div class="BGdorm"></div><div class="content">
+You invited her going to your room.
+"It's such a warm day, isn't it? So...... what you want me to do?" 
+She took off her shirt, asked you with smile.
+
+Just before you want her to do anything, she started coughing.
+
+Some blood coming out of her mouth, dyed her teeths with blood.
+
+Her head start turning to a wierd angle and her pupile turning white.
+
+You just notices a huge wound on her back that was covered by the long sleeve shirt!
+
+(color: "red")[<b>She suddenly took a bite on you shoulder as you are not prepared at all!</b>]
+
+[[End|Start]]
+</div>
+
+
+:: "Sorry, I am running out of food as well..." {"position":"1075,550","size":"100,100"}
+<div class="BGdorm"></div><div class="content">
+"Okey..." She replyed you sadly.
+
+"There were so many monsters outside chasing me before! But fortunately I was able to run away... I am so afraid... I saw some other people in the Dining Hall, but they don't want to keep me. Would you let me stay with you? I am willing to do anything! Maybe I can help you somewhere!"
+
+Looking closely to her, she gives you an (color: "red")[abnormal feeling] but you can't tell where it from.
+
+
+[[Option 1: She looks very friendly and willing to help... Working as a team is always better than being alone.]]
+
+[[Option 2: I am not sure about her background... I need to stay away from her!]]
+</div>
+
+
+:: 1 {"position":"650,550","size":"100,100"}
+You scared them. They closed up the window and turn off the curtain as well.
+
+There were many zombies attrected by you and you have to run again.
+
+[[Go upstair to find these people, they definetly can help me!|up]]
+
+[[They seems not welcoming, I'm gonna go to the dining hall instead!|Go to the dining hall]]
+
+[[They seems not welcoming, I'm gonna use that e-bike to help me escape|Unlocking e-bike, escape from the campus]]
+
+
+:: 2 {"position":"775,550","size":"100,100"}
+<div class="BGlibrary"></div><div class="content">
+story not completed
+[[here|escape]]
+</div>
+
+
+:: Celling {"position":"375,775","size":"100,100"}
+<div class="BGcelling"></div><div class="content">(set:$days to $days +0.5)
+Day $days/$food
+(if:$HaveRanch is false)[
+You found a air outlet on the celling, seems like big enough for an adult crawling on it, but you need a wranch to open it.
+](else:)[
+You found a air outlet on the celling, seems like big enough for an adult crawling on it.
+[[Escape through the air outlet|escape]]
+]
+[[Back->Left one labeled storage, door is open.]]
+</div>
+
+
+:: Chair {"position":"1050,25","size":"100,100"}
+<div class="BG1"></div><div class="content">
+<img src="Issac.gif" class="player1" alt="Idle2">
+You opened the door, saw your roommate Issac became a zombie already.
+You quickly pushed down the zombie, and strike him with the chair. You luckily hit his left eye and the chair leg shoot through his brain and you survived!
+
+However, you are running out of food and water in the dorm.
+
+You choose to:
+
+[[Stay at the dorm]]
+[[Go to the dining hall]]
+[[Go to the liberary]]
+</div>
+
+
+:: Climb on a tree {"position":"225,400","size":"100,100"}
+<div class="BG1"></div><div class="content">
+You choose the highest tree and tried to climb on it.
+Because you are a decent rock climber before, it didn't take you long to climb on it.
+
+Your assumption is correct!
+<b>These monsters can't climb!</b>
+
+But now, you STUCK on the tree.
+Zombies are all rasing their arms, trying to reach you.
+They don't smells good...
+
+[[Options 1: I will wait until they are not interested in me anymore.]]
+
+[[Options 2: Jump on the other tree, and keep doing it until they lost you.]]
+</div>
+
+
+:: Door {"position":"125,775","size":"100,100"}
+<div class="BGstorage"></div><div class="content">(set:$days to $days +0.5)
+Day $days/$food
+(if: $days < 2)[
+    You get close to the door, carefully listening to any sound.
+    It sounds quiet so you choose to open the door.
+
+    All of a sudden, the door was (color: "red")[pushed open].
+    [[You became ZOMBIE's food|Start]]
+]
+(else:)[
+(if:$ReadLetter is true)[
+They didn't lie to me! It's all clear outside!
+[[I need to talk to them! (give them informations through the letter)|escape]]
+](else:)[
+It looks clear outside. You hear some noise from the Kitchen with the door locked.
+[[There might be some other people in it, I need to check it out!|escape]]
+]
+    [[Back to the storage->Left one labeled storage, door is open.]]
+]</div>
+
+
+:: Fight! {"position":"100,250","size":"100,100"}
+<div class="BG1"></div><div class="content">
+You struggled a while to kill the first one...
+However, you inevitably made some noise while fighting.
+Now, all of them start chansing you.
+<img src="topless_white_male_zombie_with_yellow_short_running-6-frames_east.gif" class="players" alt="Idle">
+(color: "red")[The wave is unstopable.]
+
+[[End |Start]]
+</div>
+
+
+:: Floor {"position":"250,775","size":"100,100"}
+<div class="BGstorage"></div><div class="content">(set:$days to $days +0.5)
+Day $days/$food
+(if:$HaveCarKey is False)[
+Other than some empty bags and trash, you found a car key with owner's personal informations on it. Her name is Kaily. She is a third year computer science student who current live on campus by the Cowell College...
+(if:$SeenKaily is True)[
+"Wait... She's the strange women stand in front of my door" You realized quickly.
+]
+You decided to keep the car key.]
+(set:$HaveCarKey to True)
+(if:$HavePhone is False)[
+[[Keep searching|Phone]]
+](if:$HaveCarKey is True and $HavePhone is True)[
+There is nothing else here.
+]
+[[Back->Left one labeled storage, door is open.]]
+</div>
+
+
+:: Go to the dining hall {"position":"375,275","size":"100,100"}
+<div class="BG1"></div><div class="content">
+There weren't a lot of zombies roaming outside, and you successfully sneak into the dining hall.
+
+However, as you getting closer, you saw a (color: "red")[huge amount of zombie] gathering around here.
+(Because there are other students tried to find some food here, they attracted all the zombies here)
+
+<b>Some of them started walking toward you!</b>
+You know you can't bet on your stamina to run.
+
+So you tried to:
+
+[[Climb on a tree]]
+[[Going deeper to the dining hall]]
+[[Unlocking e-bike, escape from the campus]]
+[[Fight!]]
+</div>
+
+
+:: Go to the liberary {"position":"725,275","size":"100,100"}
+<div class="BG1"></div><div class="content">
+There wasn't a lot of zombies roaming outside, and you successfully sneak into the liberary.
+
+You suprisingly saw some other people here through the window on second floor.
+They also noticed you too, looking at each other with their mouth moving and making gestures.
+
+You
+[[Shout out loudly to them, "I'm not infected! PLEASE let me in!"|1]]
+
+[[Keep quiet and slow, walking toward their room while avoiding zombies|2]]
+</div>
+
+
+:: Going deeper to the dining hall {"position":"425,400","size":"100,100"}
+<div class="BGdining"></div><div class="content">(set:$days to 0)
+(set:$food to 3)
+(set:$ShelfFood to false)
+You bet <b>everything</b> you had on the dining hall.
+Behind you, zombies are (color: "red")[five seconds] away from you.
+
+There are TWO doors on two different sides:
+
+[[Left one labeled storage, door is open.]]
+
+[[Right one labeled kitchen, door seems locked|Kitchen]]
+</div>
+
+
+
+
+
+:: Ignore her {"position":"900,400","size":"100,100"}
+<div class="BGdorm"></div><div class="content">
+She left after five minutes.
+
+You wonder why there are (color: "green")[no zombies] notice her during that time, but the hunger take you back to the reality.
+
+[[Keep staying]]
+[[Go to the dining hall]]
+[[Go to the liberary]]
+</div>
+
+
+:: Keep staying {"position":"900,550","size":"100,100"}
+<div class="BGdorm"></div><div class="content">
+You eat everything you can eat in your room.
+You feel extremly (color: "red")[weak].
+
+[[You loose all the chance to survive|Start]]
+</div>
+
+
+:: Kick {"position":"625,825","size":"100,100"}
+story not completed
+[[here|escape]]
+
+
+:: Kitchen {"position":"500,650","size":"100,100"}
+The Door is (color: "red")[LOCKED], but you know that this type of doors are only able to lock them from the inside.
+
+You guess there are <b>some people</b>  hide inside the room.
+You decided to:
+[[Knock the door, yelling out "Someone let me in please! There are some zombies chasing me!"|Yell]]
+
+[[There is not much time left, I am gonna kick the door open!|Kick]]
+
+[[Join the team of zombies(Suicide)|Start]]
+
+
+:: Left one labeled storage, door is open. {"position":"375,650","size":"100,100"}
+<div class="BGstorage"></div><div class="content">
+You run into the storage, locked the door right before the zombie almost reached you!
+
+You can't wait to find food to fulfill your stomach. However, the room is a mess, and there are some really (color: "red")[limited resource] here... It seems like there are some other people been there before you, took away most of the food.
+You found two bottles of water, three cans of beans, and a jar of tomato sauce. 
+You estimited that these food will last at most <b>three days</b>... You have to find a way out before totally running out of food. 
+
+You are on (color: "green")[day $days], your food is enough for (color: "red")[$food days].
+
+Click to make actions:
+<b>(each actions will take you 0.5 days, avoid repeating will help you)</b>
+(if:$days < $food)[
+[[Check the Floor|Floor]]
+[[Check the Shelf|Shelf]]
+[[Check the Celling|Celling]]
+[[Open the Door (zombies may still be outside)|Door]](if:$days >= 2)[
+You noticed a new letter on the floor by the door. (This won't take half of the day)
+[[Read the letter|Letter]]
+]
+]
+(else:)[
+You (color: "red")[RUN OUT] of food!!
+[[The end|Start]]
+]</div>
+
+
+:: Letter {"position":"125,650","size":"100,100"}
+<div class="BGletter"></div><div class="content">
+<audio src='warm-background1.mp3' autoplay></audio>(set:$ReadLetter to true)
+Hi, we don't know how many people you have and who you are, but we've heard you two days ago. That's a HUGE amount of zombies by far we've ever seen. 
+
+Sorry that we have to wait for two days to send you this, since quarantine you for 48 hours is the best way to check wether you are infected by zombies or not. 
+
+We are sincerely inviting you to join our team... We can provide you food and water... You know, working in a group is always better than fighting alone!
+
+(color: "Green")[The only unbreakable rule here is never killing or trying to kill any human beings in any way.] Most of our decisions are made by voting. Just for letting you know, almost all of us voted agree to invite you join us!
+
+If you decide to join, please write down how many people you have and how many food you have... What kind of weapen you are using for defending yourself? Any additional details is helpful for us to know you better. We need to evaluate the risk of merging you guys just for our safty.
+
+The zombies outside are mostly gone and we cleaned up the rest... <b>If you decide to join, just slip your letter into our room and we will give you feedback very soon.</b>
+
+Hope you had a good day!
+Your lovely neighors:)
+
+[[Back->Left one labeled storage, door is open.]]
+</div>
+
+
+:: Open the door and let her in {"position":"1150,400","size":"100,100"}
+<div class="BGdorm"></div><div class="content">
+"Thank you for letting me in! My name is Kaily"
+
+She is looking at your body all the time, making you feel a little uncomfortable.
+<img src="Kaily_breathing-idle_south.gif" class="player1" alt="Idle2">
+"Can you give me some food, please? I didn't eat anything for two days... Please... I can do anything for you!"
+
+You decide to say:
+[["Sorry, I am running out of food as well..."]]
+[["I do have some food, but you need to do something for me first!"]]
+</div>
+
+
+:: Option 1: She looks very friendly and willing to help... Working as a team is always better than being alone. {"position":"1075,725","size":"100,100"}
+<div class="BGdorm"></div><div class="content">
+Just before you want her to do anything, she started coughing.
+
+Some blood coming out of her mouth, dyed her teeths with blood.
+
+Her head start turning to a wierd angle and her pupile turning white.
+
+You just notices a huge wound on her back that was covered by the long sleeve shirt!
+
+(color: "red")[<b>She suddenly took a bite on you shoulder as you are not prepared at all!</b>]
+
+[[End|Start]]
+</div>
+
+
+:: Option 2: I am not sure about her background... I need to stay away from her! {"position":"1250,725","size":"100,100"}
+<div class="BGdorm"></div><div class="content">
+You softly asked her to leave, but she is not willing to.
+
+You ended up forcing her, and the noise attracted the zombies close by.
+
+Kaily quickly ran away from you and all the zombies <b>IGNORED</b> her.
+
+You stucked at your dorm again.
+
+[[You loose all your chance to survive|Start]]
+</div>
+
+
+:: Options 1: I will wait until they are not interested in me anymore. {"position":"125,525","size":"100,100"}
+<div class="BG1"></div><div class="content">
+They never loose interest on you... Fresh human body always looks yum for them!
+
+You are weak and tired.
+You want to sleep, but the branchs are too small for it.
+
+[[You are doomed|Start]]
+</div>
+
+
+:: Options 2: Jump on the other tree, and keep doing it until they lost you. {"position":"275,525","size":"100,100"}
+<div class="BG1"></div><div class="content">
+You successfully jumped on the other one, berely catched a small branch.
+Some zombies stayed by the previous tree, some still followed you.
+You jumped again, but failed to catch it.
+
+<b>You fell all the way to the ground with multiple fractures and wounds on your body. You stayed conscious, but the pain made you breath hard... You are not able to move anymore...</b>
+<img src="topless_white_male_zombie_with_yellow_short_running-6-frames_east.gif" class="players" alt="Idle">
+[[The End|Start]]
+</div>
+
+
+:: Phone {"position":"250,650","size":"100,100"}
+<div class="BGstorage"></div><div class="content">(set:$HavePhone to True)
+(set:$days to $days +0.5)
+Day $days/$food
+You found a phone!
+
+It tells you the time and the date.
+
+There are a married couple with two kids on the wall paper.
+
+The battery is 52%.
+
+[[Back->Left one labeled storage, door is open.]]
+</div>
+
+
+:: Ranch {"position":"250,900","size":"100,100"}
+<div class="BGstorage"></div><div class="content">(set:$HaveRanch to true)
+You found a wrench... Seems like you can use that to open something.
+
+[[Back->Left one labeled storage, door is open.]]
+</div>
+
+
+:: Shelf {"position":"500,525","size":"100,100"}
+(set:$days to $days +0.5)
+Day $days/$food
+(if:$ShelfFood is False)[
+You found a can of lemonade and two cans of Tuna, that will last you for another day!
+(set:$food to $food +1)
+(set:$ShelfFood to True)
+]
+(if:$HaveRanch is false)[
+[[Keep searching|Ranch]]
+](if:$HaveRanch is true and $ShelfFood is true)[
+Nothing left here...
+]
+[[Back->Left one labeled storage, door is open.]]
+
+
+:: Start {"position":"275,125","size":"100,100"}
+<div class="BG1"></div><div class="content">
+<audio src='warm-background1.mp3' autoplay></audio>
+(set: $rounds to 0)(set:$SeenKaily to false)(set:$HaveCarKey to false)(set:$HavePhone to false)(set:$HaveRanch to false)(set:$ReadLetter to false)
+*You are a UCSC(university of califlower, silver citizen) student.*
+
+In the late summer, five days ago, there is a (color: "red")[<b>unknown virus</b>] spread over the whole world and 80% of the population became zombies.
+
+Stay indoors. 
+Avoid contact with others. 
+That's what you are telling yourself.
+
+Three minutes ago, you were at your dorm and there was SOMEONE starting (color: "red")[knocking] your door!
+
+You know he is most likely not a human because it sounds more like someone using his whole body hiting the door. 
+
+You quickly made a decision for your <b>weapon</b>:
+
+[[Water bottle]]
+[[Toilet paper]]
+[[Chair]]
+</div>
+
+
+
+
+:: Stay at the dorm {"position":"1025,275","size":"100,100"}
+<div class="BG1"></div><div class="content">
+(set:$SeenKaily to true)
+You stayed at the dorm, finished all food you had.
+
+While you are starving, a (color: "red")[<b>suspicious</b>] women quietly stand in front of your apartment door, peeking the inside.
+<img src="Kaily_breathing-idle_south-east.gif" class="player1" alt="Idle">
+She is wearing long pant and long sleve shirt, looking tired.
+There are quite some blood and dirt on her pant.
+
+She didn't see you because you are hiding behind the door and it's darker inside as well.
+
+[[Open the door and let her in]]
+[[Ignore her]]
+</div>
+
+
+:: Toilet paper {"position":"800,25","size":"100,100"}
+<div class="BG1"></div><div class="content">
+<img src="Issac.gif" class="player1" alt="Idle2">
+You opened the door, saw your roommate Issac became a zombie already.
+You quickly pushed down the zombie, and tucked whole toilet paper in his mouth. He now can't bite you anymore, and you killed him quickly.
+
+However, you are running out of food and water in the dorm.
+
+You choose to:
+
+[[Stay at the dorm]]
+[[Go to the dining hall]]
+[[Go to the liberary]]
+</div>
+
+
+:: Unlocking e-bike, escape from the campus {"position":"600,400","size":"100,100"}
+<div class="BGbike"></div><div class="content">
+<b>The app is not running, because the whole human civilization got shut down.</b>
+<img src="topless_white_male_zombie_with_yellow_short_running-6-frames_east.gif" class="players" alt="Idle">
+[[Nice try, but you are dead|Start]]
+</div>
+
+
+:: Water bottle {"position":"575,25","size":"100,100"}
+<div class="BG1"></div><div class="content">
+You opened the door, saw your roommate Issac became a zombie already.
+You throw the bottle precisely on his head, but it didn't stop him for a second.
+<img src="Issac.gif" class="player1" alt="Idle2">
+You became his food.
+
+[[Back to start|Start]]
+</div>
+
+
+:: Yell {"position":"500,825","size":"100,100"}
+story not completed
+[[here|escape]]
+
+
+:: escape {"position":"600,1100","size":"100,100"}
+<div class="BG1"></div><div class="content">
+<audio src='warm-background1.mp3' autoplay></audio>
+You survived!
+</div>
+
+
+:: up {"position":"725,700","size":"100,100"}
+You went upstairs, found the room, but it's locked.
+
+You yelled. No one responsed.
+
+You tried to kick the door open. It didn't move at all.
+
+These (color: "red")[monsters] guadually coming up.
+
+[[You have nowhere to escape...|Start]]
+
+
+:: StoryScript [script]
+window.playMusic = function (filename) {
+  const audio = new Audio(filename);
+  audio.play();
+};
+
+window.stopMusic = function() {
+  if (window.storyMusic) {
+    window.storyMusic.pause();
+  }
+};
+
+
+:: StoryStylesheet [stylesheet]
+.line {
+  display: flex;           /* puts children in a horizontal row */
+  align-items: center;     /* vertical alignment */
+  gap: 20px;               /* spacing between images */
+}
+
+.player1, .player2, .player3, .player4, .player5 {
+  width: 160px;
+  height: 160px;
+}
+.players{
+  width: 64px;
+  height: 64px;
+}
+.content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px;             /* optional margin from edges */
+  display: block;
+  flex-direction: column;    /* stack elements vertically */
+  justify-content: flex-start; /* top */
+  align-items: flex-start;   /* left-align text */
+  text-align: left;          /* left-align multi-line text */
+}
+.BG1 {
+  position: fixed;          /* covers full screen */
+  top: 0; 
+  left: 0;
+  width: 100vw;             /* full viewport width */
+  height: 100vh;            /* full viewport height */
+  background-image: url('pixel_art_empyt_school_campus.jpeg');
+  background-size: cover;    /* fill while keeping aspect ratio */
+  background-position: center;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+
+  display: flex;             /* optional, for aligning text or GIFs */
+  flex-direction: column;
+  justify-content: flex-start; 
+  align-items: center; 
+  padding: 20px;             /* spacing inside div */
+  z-index: 0;                /* behind text */
+}
+
+.BG1::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);  /* dim background only */
+  pointer-events: none;
+  z-index: -1;                   /* behind text content */
+}
+
+.BGdorm {
+  position: fixed;          /* covers full screen */
+  top: 0; 
+  left: 0;
+  width: 100vw;             /* full viewport width */
+  height: 100vh;            /* full viewport height */
+  background-image: url('dorm.jpeg');
+  background-size: cover;    /* fill while keeping aspect ratio */
+  background-position: center;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+
+  display: flex;             /* optional, for aligning text or GIFs */
+  flex-direction: column;
+  justify-content: flex-start; 
+  align-items: center; 
+  padding: 20px;             /* spacing inside div */
+  z-index: 0;                /* behind text */
+}
+
+.BGdorm::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);  /* dim background only */
+  pointer-events: none;
+  z-index: -1;                   /* behind text content */
+}
+.BGbike {
+  position: fixed;          
+  top: 0; 
+  left: 0;
+  width: 100vw;             
+  height: 100vh;
+  background-image: url('bike.jpeg');
+  background-size: cover;    /
+  background-position: center;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+
+  display: flex;             
+  flex-direction: column;
+  justify-content: flex-start; 
+  align-items: center; 
+  padding: 20px;
+  z-index: 0;               
+}
+
+.BGbike::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  pointer-events: none;
+  z-index: -1;                 
+}
+.BGletter {
+  position: fixed;         
+  top: 0; 
+  left: 0;
+  width: 100vw;          
+  height: 100vh;            
+  background-image: url('letter.jpeg');
+  background-size: cover;   
+  background-position: center;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+
+  display: flex;           
+  flex-direction: column;
+  justify-content: flex-start; 
+  align-items: center; 
+  padding: 20px;
+  z-index: 0;               
+}
+
+.BGletter::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);  
+  pointer-events: none;
+  z-index: -1;
+}
+.BGdining {
+  position: fixed;         
+  top: 0; 
+  left: 0;
+  width: 100vw;          
+  height: 100vh;            
+  background-image: url('dining-hall.jpeg');
+  background-size: cover;   
+  background-position: center;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+
+  display: flex;           
+  flex-direction: column;
+  justify-content: flex-start; 
+  align-items: center; 
+  padding: 20px;
+  z-index: 0;               
+}
+
+.BGdining::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);  
+  pointer-events: none;
+  z-index: -1;
+}
+
+.BGstorage {
+  position: fixed;         
+  top: 0; 
+  left: 0;
+  width: 100vw;          
+  height: 100vh;            
+  background-image: url('storage.jpeg');
+  background-size: cover;   
+  background-position: center;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+
+  display: flex;           
+  flex-direction: column;
+  justify-content: flex-start; 
+  align-items: center; 
+  padding: 20px;
+  z-index: 0;               
+}
+
+.BGstorage::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);  
+  pointer-events: none;
+  z-index: -1;
+}
+.BGlibrary {
+  position: fixed;         
+  top: 0; 
+  left: 0;
+  width: 100vw;          
+  height: 100vh;            
+  background-image: url('library.jpeg');
+  background-size: cover;   
+  background-position: center;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+
+  display: flex;           
+  flex-direction: column;
+  justify-content: flex-start; 
+  align-items: center; 
+  padding: 20px;
+  z-index: 0;               
+}
+
+.BGlibrary::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);  
+  pointer-events: none;
+  z-index: -1;
+}
+.BGcelling {
+  position: fixed;         
+  top: 0; 
+  left: 0;
+  width: 100vw;          
+  height: 100vh;            
+  background-image: url('celling.jpeg');
+  background-size: cover;   
+  background-position: center;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+
+  display: flex;           
+  flex-direction: column;
+  justify-content: flex-start; 
+  align-items: center; 
+  padding: 20px;
+  z-index: 0;               
+}
+
+.BGcelling::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);  
+  pointer-events: none;
+  z-index: -1;
+}
+

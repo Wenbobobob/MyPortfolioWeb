@@ -468,3 +468,16 @@ footer {
     }
 
 }
+.experiments-block {
+  margin-top: 70px;
+}
+
+.featured-project .tag {
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.featured-project .tag:hover {
+  transform: translateY(-3px);
+  background: #e6cfb0;
+}
