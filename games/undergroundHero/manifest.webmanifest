@@ -1,0 +1,12 @@
+{
+  "name": "Underground Hero",
+  "short_name": "Underground Hero",
+  "id": "com.example.topdownrpg",
+  "description": "CMPM 80k Graphical Game Group F1 Project\n\nYahir Prenger, Daniel Freysson, Bob Zou",
+  "orientation": "landscape",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "black",
+  "categories": ["games", "entertainment"],
+  "icons": []
+}

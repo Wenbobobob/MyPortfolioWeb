@@ -481,3 +481,12 @@ footer {
   transform: translateY(-3px);
   background: #e6cfb0;
 }
+.featured-image{
+
+    width:340px;
+
+    border-radius:24px;
+
+    object-fit:cover;
+
+}
